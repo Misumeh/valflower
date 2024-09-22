@@ -1,0 +1,256 @@
+/* Estilo general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Pantalla de bienvenida */
+.welcome-screen {
+    background: linear-gradient(135deg, #fcbbfc, #be00f8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in;
+}
+
+.title {
+    font-size: 2.2em;
+    color: #fff;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.start-btn {
+    background-color: #fff;
+    color: #be00f8;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.start-btn:hover {
+    background-color: #ffa0f1;
+    color: #333333;
+    transform: scale(1.05);
+}
+
+/* Página de poema */
+.poem-page {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in;
+}
+
+.poem-title {
+    font-size: 1.8em;
+    color: #be00f8;
+    font-weight: 600;
+}
+
+.poem-text {
+    font-size: 1.2em;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.next-btn {
+    background-color: #be00f8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.next-btn:hover {
+    background-color: #680088;
+    transform: scale(1.05);
+}
+
+/* Botón de volver al inicio */
+.back-btn {
+    background-color: transparent;
+    border: none;
+    color: #be00f8;
+    font-size: 2em;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    color: #be00f8;
+    transform: scale(1.1);
+}
+
+.back-btn i {
+    transition: all 0.3s ease;
+}
+
+/* Galería de fotos */
+.photo-gallery {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in;
+}
+
+.gallery-title {
+    font-size: 1.8em;
+    color: #333;
+    font-weight: 600;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Estilos generales, igual que antes */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Lightbox estilos */
+/* Lightbox estilos */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    animation: fadeIn 0.5s ease;
+}
+
+.lightbox-text {
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro para legibilidad */
+    padding: 10px;
+    border-radius: 5px;
+    animation: slideUp 0.5s ease;
+}
+
+
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hidden {
+    display: none;
+}
+.whatsapp-btn {
+    background-color: #25D366; /* Verde WhatsApp */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E; /* Un poco más oscuro */
+}
