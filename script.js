@@ -1,3 +1,4 @@
+const audio = new Audio('https://raw.githubusercontent.com/Misumeh/valflower/main/swimming.mp3');
 // Pensamientos para cada imagen
 const photoThoughts = [
     "Cuando haces esa boquita de besito, me envuelve una ternura que no puedo resistir.",
